@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Professional Medical UI - Soft Lavender & Pastel Purple */
+  --primary-purple: #8E5CD9;
+  --primary-purple-dark: #7A49C5;
+  --primary-purple-light: #BFA2F2;
+  --secondary-purple: #C4B5FD;
+  --lavender-gradient: linear-gradient(135deg, #E9DDF5, #CFA9E8, #A875D6);
+  --btn-gradient: linear-gradient(to right, #BFA2F2, #8E5CD9, #7A49C5);
+  --bg-soft: #F3ECFA;
+  --bg-card: #F8F5FC;
+  --text-main: #2E1065;
+  --text-secondary: #4B5563;
+  --heading-color: #2E1065;
+  --error-color: #EF4444;
+  /* Muted Red */
+  --success-color: #10B981;
+  --white: #FFFFFF;
+  --shadow-soft: 0 10px 25px -5px rgba(142, 92, 217, 0.1), 0 8px 10px -6px rgba(142, 92, 217, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-soft);
+  min-height: 100vh;
+  color: var(--text-main);
+  background: var(--lavender-gradient);
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utility classes */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}

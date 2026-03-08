@@ -1,0 +1,49 @@
+type User @table {
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  photoUrl: String
+  birthDate: Date
+  lastPeriodStart: Date
+}
+
+type CycleEntry @table {
+  user: User!
+  entryDate: Date!
+  createdAt: Timestamp!
+  isPeriodStart: Boolean
+  isPeriodEnd: Boolean
+  mood: String # Could be an enum, but using String for flexibility as per instructions
+  notes: String
+}
+
+type WellnessGoal @table {
+  user: User!
+  name: String!
+  createdAt: Timestamp!
+  description: String
+  targetFrequency: String # e.g., "daily", "weekly"
+}
+
+type GoalAchievement @table {
+  user: User!
+  wellnessGoal: WellnessGoal!
+  achievementDate: Date!
+  isComplete: Boolean!
+  createdAt: Timestamp!
+}
+
+type SymptomType @table {
+  name: String!
+  createdAt: Timestamp!
+  description: String
+}
+
+type SymptomLog @table {
+  user: User!
+  symptomType: SymptomType!
+  cycleEntry: CycleEntry # Link to a specific daily entry
+  logDate: Date!
+  createdAt: Timestamp!
+  intensity: String # e.g., "mild", "moderate", "severe"
+}

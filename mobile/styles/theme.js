@@ -1,0 +1,40 @@
+export const theme = {
+    colors: {
+        // Professional Medical UI - Soft Lavender & Pastel Purple
+        background: '#F3ECFA',
+        backgroundGradientStart: '#E9DDF5',
+        backgroundGradientMid: '#CFA9E8',
+        backgroundGradientEnd: '#A875D6',
+        card: '#F8F5FC',
+        surface: '#FFFFFF',
+        primary: '#8E5CD9',
+        primaryDark: '#7A49C5',
+        primaryLight: '#BFA2F2',
+        secondary: '#C4B5FD',
+        secondaryText: '#4C1D95',
+        iconActive: '#8E5CD9',
+        inputBorder: '#E9DDF5',
+        inputFocus: '#BFA2F2',
+        heading: '#2E1065',
+        body: '#4B5563',
+        muted: '#9CA3AF',
+        accentPink: '#FDE2F3',
+        accentBlue: '#E0F2FE',
+        accentGreen: '#DCFCE7',
+        accentPeach: '#FEF3C7',
+        buttonTextLight: '#FFFFFF',
+    },
+    gradients: {
+        page: ['#E9DDF5', '#CFA9E8', '#A875D6'],
+        primaryButton: ['#BFA2F2', '#8E5CD9', '#7A49C5'],
+    },
+    shadows: {
+        soft: {
+            shadowColor: 'rgba(142, 92, 217, 0.15)',
+            shadowOffset: { width: 0, height: 4 },
+            shadowOpacity: 1,
+            shadowRadius: 10,
+            elevation: 3,
+        },
+    },
+};

@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "1e0a1ab7-7d2f-4f6b-98d9-b655a06b5018"
+      }
+    },
+    "android": {
+      "package": "com.saidevmanish14.hackathon26"
+    }
+  }
+}

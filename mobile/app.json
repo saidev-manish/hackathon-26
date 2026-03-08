@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "PulseCare",
+    "slug": "hackathon26",
+    "scheme": "pulsecare",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/p1.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/p1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.companypcos"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/p1.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.companypcos",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/p1.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      "expo-video",
+      "react-native-ble-plx"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1e0a1ab7-7d2f-4f6b-98d9-b655a06b5018"
+      }
+    },
+    "owner": "saidevmanish14"
+  }
+}

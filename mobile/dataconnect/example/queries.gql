@@ -1,0 +1,39 @@
+query GetMyWellnessGoals @auth(level: USER) {
+  wellnessGoals(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    name
+    description
+    targetFrequency
+    createdAt
+  }
+}
+
+mutation CreateSymptomLog($symptomTypeId: UUID!, $logDate: Date!, $intensity: String) @auth(level: USER) {
+  symptomLog_insert(data: {
+    userId_expr: "auth.uid",
+    symptomTypeId: $symptomTypeId,
+    logDate: $logDate,
+    intensity: $intensity,
+    createdAt_expr: "request.time"
+  })
+}
+
+query ListPublicSymptomTypes @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it provides general information about symptom types.") {
+  symptomTypes {
+    id
+    name
+    description
+  }
+}
+
+mutation UpdateMyCycleEntry($id: UUID!, $isPeriodEnd: Boolean, $mood: String, $notes: String) @auth(level: USER) {
+  cycleEntry_update(
+    key: {id: $id},
+    data: {
+      isPeriodEnd: $isPeriodEnd,
+      mood: $mood,
+      notes: $notes
+    },
+    where: {userId: {eq_expr: "auth.uid"}} # Ensure user can only update their own entry
+  )
+}
